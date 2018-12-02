@@ -1,0 +1,6 @@
+﻿
+#NGameplay = { a = b }
+NGameplay = { STARBASE_CAPACITY_SYSTEM_MULT = 0.025 }
+NGameplay = { STARBASE_CAPACITY_POP_MULT = 0.0125 }
+dependencies = { "AlphaMod 2.1 Beta" }
+dependencies = { "!AlphaMod: Outpost X" }
