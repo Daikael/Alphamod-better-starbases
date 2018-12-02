@@ -11,17 +11,17 @@ starbase_outpost = {
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 1000
+		ship_armor_add = 1500
 		starbase_module_capacity_add = 1
 		starbase_defense_platform_capacity_add = 3
-		starbase_building_capacity_add = 2
+		starbase_building_capacity_add = 1
 	}
 	ship_modifier = {
-		ship_fire_rate_mult = 0.55
-		ship_weapon_range_mult = 0.21
+		ship_fire_rate_mult = 0.60
+		ship_weapon_range_mult = 0.20
 	}
-	max_hitpoints = 5500
-	base_buildtime = 350
+	max_hitpoints = 6500
+	base_buildtime = 360
 	cost = 200
 	combat_size_multiplier = 5
 	size_multiplier = 4
@@ -32,7 +32,7 @@ starbase_outpost = {
 
 	is_designable = no
 	num_target_locators = 0
-	is_space_station = yes
+	is_space_station = no
 	can_have_federation_design = no
 	is_civilian = no
 	components_add_to_cost = no
@@ -63,16 +63,16 @@ starbase_starport = {
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 2000
-		starbase_module_capacity_add = 4
-		starbase_building_capacity_add = 3
+		ship_armor_add = 3000
+		starbase_module_capacity_add = 6
+		starbase_building_capacity_add = 4
 		starbase_defense_platform_capacity_add = 7
 	}
 	ship_modifier = {
 		ship_fire_rate_mult = 0.50
 		ship_weapon_range_mult = 0.20
 	}			  
-	max_hitpoints = 10000
+	max_hitpoints = 15000
 	base_buildtime = 360
 	cost = 300
 	combat_size_multiplier = 20
@@ -85,7 +85,7 @@ starbase_starport = {
 	}
 	is_designable = no
 	num_target_locators = 0
-	is_space_station = yes
+	is_space_station = no
 	can_have_federation_design = no
 	is_civilian = no
 	components_add_to_cost = no
@@ -117,18 +117,18 @@ starbase_starhold = {
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 5000
-		starbase_module_capacity_add = 9
-		starbase_building_capacity_add = 6
-		starbase_defense_platform_capacity_add = 9
+		ship_armor_add = 8000
+		starbase_module_capacity_add = 10
+		starbase_building_capacity_add = 8
+		starbase_defense_platform_capacity_add = 11
 	}
 	ship_modifier = {
 		ship_fire_rate_mult = 0.50
 		ship_weapon_range_mult = 0.20
 	}					
-	max_hitpoints = 20000
+	max_hitpoints = 30000
 	base_buildtime = 720
-	cost = 750
+	cost = 800
 	combat_size_multiplier = 30
 	size_multiplier = 4
 	fleet_slot_size = 2
@@ -141,7 +141,7 @@ starbase_starhold = {
 	}
 	is_designable = no
 	num_target_locators = 0
-	is_space_station = yes
+	is_space_station = no
 	can_have_federation_design = no
 	is_civilian = no
 	components_add_to_cost = no
@@ -176,13 +176,13 @@ starbase_starfortress = {
 		ship_armor_add = 10000
 		starbase_module_capacity_add = 16
 		starbase_building_capacity_add = 14
-		starbase_defense_platform_capacity_add = 18
+		starbase_defense_platform_capacity_add = 17
 	}
 	ship_modifier = {
 		ship_fire_rate_mult = 0.50
 		ship_weapon_range_mult = 0.20
   }
-	max_hitpoints = 40000
+	max_hitpoints = 100000
 	base_buildtime = 1080
 	cost = 2500
 	combat_size_multiplier = 40
@@ -199,7 +199,7 @@ starbase_starfortress = {
 	}
 	is_designable = no
 	num_target_locators = 0
-	is_space_station = yes
+	is_space_station = no
 	can_have_federation_design = no
 	is_civilian = no
 	components_add_to_cost = no
@@ -237,10 +237,10 @@ starbase_citadel = {
 		starbase_defense_platform_capacity_add = 21
 	}
 	ship_modifier = {
-		ship_fire_rate_mult = 0.55
+		ship_fire_rate_mult = 0.60
 		ship_weapon_range_mult = 0.25
 	}							
-	max_hitpoints = 100000
+	max_hitpoints = 300000
 	base_buildtime = 1440
 	cost = 7500
 	combat_size_multiplier = 50
@@ -263,7 +263,7 @@ starbase_citadel = {
 	}
 	is_designable = no
 	num_target_locators = 0
-	is_space_station = yes
+	is_space_station = no
 	can_have_federation_design = no
 	is_civilian = no
 	components_add_to_cost = no
@@ -314,7 +314,7 @@ starbase_swarm = {
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
 	num_target_locators = 0
-	is_space_station = yes
+	is_space_station = no
 	can_have_federation_design = no
 	is_civilian = no
 	components_add_to_cost = no
@@ -353,7 +353,7 @@ starbase_ai = {
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
 	num_target_locators = 0
-	is_space_station = yes
+	is_space_station = no
 	can_have_federation_design = no
 	is_civilian = no
 	components_add_to_cost = no
@@ -392,7 +392,7 @@ starbase_exd = {
 	section_slots = { "core" = { locator = "root" } }
 	is_designable = no
 	num_target_locators = 0
-	is_space_station = yes
+	is_space_station = no
 	can_have_federation_design = no
 	is_civilian = no
 	components_add_to_cost = no
@@ -432,7 +432,7 @@ starbase_marauder = {
 	section_slots = { "mid" = { locator = "part1" } }
 	is_designable = no
 	num_target_locators = 0
-	is_space_station = yes
+	is_space_station = no
 	can_have_federation_design = no
 	is_civilian = no
 	components_add_to_cost = no
