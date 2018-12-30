@@ -1,0 +1,57 @@
+# possible section models:
+# SHIPYARD_STARBASE_SECTION
+# REFINERY_STARBASE_SECTION
+# SCIENCE_STARBASE_SECTION
+# HANGAR_STARBASE_SECTION
+# ASSEMBLYYARD_STARBASE_SECTION
+
+###modded
+solar_panel_network = {
+	icon = "GFX_solar_panel_network"
+	section = "REFINERY_STARBASE_SECTION"
+	construction_days = 180
+	initial = yes
+	
+	possible = {
+		solar_system = {
+			custom_tooltip = {
+				fail_text = "requires_no_black_hole_or_dyson_sphere"
+				NOR = {
+					is_star_class = sc_black_hole
+					has_megastructure = dyson_sphere_3
+					has_megastructure = dyson_sphere_4
+					has_megastructure = dyson_sphere_5
+				}
+			}				
+		}
+	}
+	
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 50
+		}
+
+		produces = {
+			energy = 3
+		}
+		produced_resource_trigger = {
+			modifier = {
+				hidden_trigger = { exists = this }		
+				has_starbase_building = large_solar_panel_network
+				resources = {
+					produces = {
+						energy = 5
+					}
+				}
+			}
+		}
+	}
+	
+	ai_build_at_chokepoint = no
+	ai_weight = {
+		weight = 15
+	}
+}
+
+###end modded
