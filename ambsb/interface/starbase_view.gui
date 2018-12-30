@@ -309,7 +309,18 @@ guiTypes = {
 					add_horizontal = yes
 					max_slots_horizontal = 6#4wtf
 				}
-			}
+
+				buttonType = {
+					name = "trade_routes"
+					quadTextureSprite = "GFX_standard_button_180_34_button"
+					position = { x = 33 y = -54  }
+					Orientation = "LOWER_LEFT"
+					buttonFont = "cg_16b"
+					text = "TRADE_ROUTES"
+					font = "cg_16b"
+				}
+
+			}			
 
 			containerWindowType = {
 				name = "buildings_info"
@@ -1402,6 +1413,146 @@ guiTypes = {
 			vertical_alignment = center
 			orientation = upper_left
 			alwaysTransparent = yes
+		}
+	}
+	### Popcat selection dialog
+	containerWindowType = {
+		name = "popcat_selection_dialog"
+		position = { x = -172 y = -236 }
+		size = { width = 353 height = 518 }
+		orientation = center
+		moveable = yes
+
+		background = {
+			name = "popcat_selection_dialog"
+			quadTextureSprite = "GFX_start_screen_bg"
+		}
+
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = -10 y = -5 }
+			alwaysTransparent = yes
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -46 y = 8 }
+			orientation = "UPPER_RIGHT"
+			shortCut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		instantTextBoxType = {
+			name = "title"
+			font = "malgun_goth_24"
+			text = "POPCAT_SELECTION_TITLE"
+			position = { x = 17 y = 14 }
+			maxWidth = 344
+			maxHeight = 40
+			fixedSize = yes
+			orientation = upper_left
+			alwaysTransparent = yes
+		}
+
+		smoothListBoxType = {
+			name = "popcats"
+			position = { x = 18 y = 48 }
+			orientation = upper_left
+			size = { x = 307 y = 454 }
+			borderSize = { x = 0 y = 0 }
+			scrollbartype = "standardlistbox_slider"
+			autohide_scrollbar = yes
+			spacing = 5
+		}
+
+
+	}
+
+	### Popcat selection entry
+	containerWindowType = {
+		name = "popcat_selection_entry"
+		position = { x = 10 y = 0 }
+		size = { width = 300 height = 70 }
+		clipping = no
+
+		background = {
+			name = "popcat_selection_entry_background"
+			quadTextureSprite = "GFX_black_box_planet_view"
+		}
+
+		buttonType = {
+			name = "baseline_pop"
+			spriteType = "GFX_drop_area_green"
+			size = { x = 300 y = 70 }
+			alwaysTransparent = yes
+		}
+
+		containerWindowType = {
+			name = "portrait"
+			position = { x = 5 y = 5 }
+			size = { width = 65 height = 60 }
+			clipping = yes
+
+			iconType = {
+				name = "species_portrait"
+				spriteType = "GFX_portrait_character"
+				position = { x = -28 y = -9 }
+				scale = 0.2
+				alwaysTransparent = yes
+			}
+		}
+
+		instantTextBoxType = {
+			name = "species_name"
+			font = "cg_16b"
+			text = "SPECIES"
+			position = { x = 80 y = 9 }
+			maxWidth = 344
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			text_color_code = "E"
+			alwaysTransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "ideal_planet_type"
+			font = "cg_16b"
+			text = "SPECIES"
+			position = { x = 80 y = 39 }
+			maxWidth = 344
+			maxHeight = 40
+			fixedSize = yes
+			format = left
+			orientation = upper_left
+			alwaysTransparent = yes
+			pdx_tooltip = "IDEAL_PLANET_CLASS_TOOLTIP"
+		}
+
+		overlappingElementsBoxType = {
+			name = "traits_list"
+			size = { x = 128 y = 24 }
+			position = { x = -131 y = 3 }
+			orientation = "UPPER_RIGHT"
+			format = right
+			spacing = 0
+		}
+	}
+
+	containerWindowType = {
+		name = "terraform_entry"
+		size = { width = 140 height = 30 }
+
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_general_interface_button"
+			position = { x = 0 y = 0  }
+			buttonFont = "hoi_16mbs"
+			text = ""
+			font = "hoi_16mbs"
 		}
 	}
 }
