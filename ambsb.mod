@@ -1,4 +1,4 @@
-name="AlphaMod Better Starbases"
+name="Daikael's Better Starbases"
 path="mod/ambsb"
 tags={
 	"Buildings"
@@ -6,4 +6,4 @@ tags={
 }
 picture="mod_profile_1.png"
 remote_file_id="1403430492"
-supported_version="2.1.*"
+supported_version="2.2.*"
