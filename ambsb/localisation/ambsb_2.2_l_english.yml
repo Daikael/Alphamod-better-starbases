@@ -1,8 +1,32 @@
 ﻿l_english:
 
+ ##Starbase Buildings
+
  sm_large_solar_panel_network:0 "Large Solar Panel Network"
  sm_large_solar_panel_network_desc:0 "A Large solar array, capable of sustaining entire colonies or fleets on its own."
 
  sm_large_reprocessing_network:0 "Space Reprecessing Array"
- sm_large_reprocessing_network_desc:0 "A substantial network of founderies, forges, and storage bays for processing space debris and asteroids."
- 
+ sm_large_reprocessing_network_desc:0 "A substantial network of refineries, forges, and storage bays for processing space debris and asteroids."
+
+ sm_Space_Foundry:0 "Station Founderies"
+ sm_Space_Foundry_desc:0 "A group of local station founderies, allowing for the manufacturing of alloys with some minor inefeciencies."
+
+ sm_space_factory:0 "Automated Consumer Goods Factory"
+ sm_space_factory_desc:0 "An automated plant that creates consumer goods, but is inneficent."
+
+ ##Starbase Modules
+
+ sm_space_mining_network:0 "Small Space Mining Bay"
+ sm_space_mining_network_desc:0 "A small bay to be equiped on a starbase, allowing for basic space based mining and resource collection. Having an §GSpace Reprecessing Array§! will improve the output by §Y1.5 Minerals§!  £minerals.\n"
+
+ sm_space_power_plant:0 "Station Reactor"
+ sm_space_power_plant_desc:0 "An internal reactor for  the station, produces a small amount of energy."
+
+ sm_solar_panel_network:0 "Small Solar Array"
+ sm_solar_panel_network_desc:0 "A small network of solar panels, producing a reasonable ammount of energy.  Having an §GLarge Solar Panel Network§! will improve the output by §Y2 Energy§!  £energy.\n"
+
+ sm_sb_shield_generators:0 "Small Shield Generator Array"
+ sm_sb_shield_generators_desc:0 "A small array of shield generators to protect the station from direct attack."
+
+ sm_sb_shield_repair_generators:0 "Regenerative Shield Gennerator Array"
+ sm_sb_shield_repair_generators_desc:0 "This array of shield generators is optimized for both self-regeneration and the regeneration of other shield networks on the station."

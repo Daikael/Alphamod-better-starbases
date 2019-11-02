@@ -25,7 +25,20 @@ starbase_outpost = {
 	resources = {
 		category = starbase_stations
 		cost = {
-			alloys = 100
+			trigger = {
+				from = {
+					is_machine_empire = no 
+				}
+			}
+			alloys = 150
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = yes 
+				}
+			}
+			alloys = 175
 		}
 
 		upkeep = {
@@ -38,6 +51,7 @@ starbase_outpost = {
 	fleet_slot_size = 2
 	section_slots = {
 		"core" = { locator = "part1" }
+		"1" = { locator = "part2" }
 	}
 
 	is_designable = no
@@ -69,7 +83,7 @@ starbase_starport = {
 	modifier = {
 		ship_evasion_mult = -1
 		ship_armor_add = 3000
-		starbase_module_capacity_add = 6
+		starbase_module_capacity_add = 4
 		starbase_building_capacity_add = 4
 		starbase_defense_platform_capacity_add = 7
 		#trade system
@@ -86,7 +100,20 @@ starbase_starport = {
 	resources = {
 		category = starbase_stations
 		cost = {
-			alloys = 200
+			trigger = {
+				from = {
+					is_machine_empire = no 
+				}
+			}
+			alloys = 250
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = yes 
+				}
+			}
+			alloys = 300
 		}
 
 		upkeep = {
@@ -101,7 +128,12 @@ starbase_starport = {
 		"core" = { locator = "part1" }
 		"1" = { locator = "part2" }
 		"2" = { locator = "part3" }
+		"3" = { locator = "part4" }
+		"4" = { locator = "part5" }
+		"5" = { locator = "part6" }
+		"6" = { locator = "part7" }
 	}
+
 	is_designable = no
 	num_target_locators = 0
 	is_space_station = no
@@ -149,7 +181,20 @@ starbase_starhold = {
 	resources = {
 		category = starbase_stations
 		cost = {
-			alloys = 500
+			trigger = {
+				from = {
+					is_machine_empire = no 
+				}
+			}
+			alloys = 525
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = yes 
+				}
+			}
+			alloys = 575
 		}
 
 		upkeep = {
@@ -166,7 +211,11 @@ starbase_starhold = {
 		"2" = { locator = "part3" }
 		"3" = { locator = "part4" }
 		"4" = { locator = "part5" }
+		"5" = { locator = "part6" }
+		"6" = { locator = "part7" }
+		"7" = { locator = "part8" }
 	}
+
 	is_designable = no
 	num_target_locators = 0
 	is_space_station = no
@@ -196,7 +245,7 @@ starbase_starfortress = {
 	rotation_speed = 0.0
 	modifier = {
 		ship_evasion_mult = -1
-		ship_armor_add = 10000
+		ship_armor_add = 14000
 		starbase_module_capacity_add = 16
 		starbase_building_capacity_add = 14
 		starbase_defense_platform_capacity_add = 17
@@ -214,7 +263,20 @@ starbase_starfortress = {
 	resources = {
 		category = starbase_stations
 		cost = {
-			alloys = 1250
+			trigger = {
+				from = {
+					is_machine_empire = no 
+				}
+			}
+			alloys = 1500
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = yes 
+				}
+			}
+			alloys = 1750
 		}
 
 		upkeep = {
@@ -233,7 +295,18 @@ starbase_starfortress = {
 		"4" = { locator = "part5" }
 		"5" = { locator = "part6" }
 		"6" = { locator = "part7" }
+		"7" = { locator = "part8" }
+		"8" = { locator = "part9" }
+		"9" = { locator = "part10" }
+		"10" = { locator = "part11" }
+		"11" = { locator = "part12" }
+		"12" = { locator = "part13" }
+		"13" = { locator = "part14" }
+		"14" = { locator = "part15" }
+		"15" = { locator = "part16" }
+		"16" = { locator = "part17" }
 	}
+
 	is_designable = no
 	num_target_locators = 0
 	is_space_station = no
@@ -281,7 +354,20 @@ starbase_citadel = {
 	resources = {
 		category = starbase_stations
 		cost = {
-			alloys = 3500
+			trigger = {
+				from = {
+					is_machine_empire = no 
+				}
+			}
+			alloys = 4000
+		}
+		cost = {
+			trigger = {
+				from = {
+					is_machine_empire = yes 
+				}
+			}
+			alloys = 4500
 		}
 
 		upkeep = {
@@ -300,7 +386,26 @@ starbase_citadel = {
 		"4" = { locator = "part5" }
 		"5" = { locator = "part6" }
 		"6" = { locator = "part7" }
+		"7" = { locator = "part8" }
+		"8" = { locator = "part9" }
+		"9" = { locator = "part10" }
+		"10" = { locator = "part11" }
+		"11" = { locator = "part12" }
+		"12" = { locator = "part13" }
+		"13" = { locator = "part14" }
+		"14" = { locator = "part15" }
+		"15" = { locator = "part16" }
+		"16" = { locator = "part17" }
+		"17" = { locator = "part18" }
+		"18" = { locator = "part19" }
+		"19" = { locator = "part20" }
+		"20" = { locator = "part21" }
+		"21" = { locator = "part22" }
+		"22" = { locator = "part23" }
+		"23" = { locator = "part24" }
+		"24" = { locator = "part25" }
 	}
+	
 	is_designable = no
 	num_target_locators = 0
 	is_space_station = no
@@ -324,168 +429,6 @@ starbase_citadel = {
 	icon_frame = 5
 }
 
-####################
-# CRISES STARBASES #
-####################
-
-starbase_swarm = {
-	graphical_culture = { "swarm_01" }
-	max_speed = 0.0
-	acceleration = 0.0
-	rotation_speed = 0.0
-	modifier = {
-		ship_evasion_mult = -1
-		ship_armor_add = 30000
-	}
-	ship_modifier = {
-		ship_weapon_range_mult = 0.20
-	}
-	max_hitpoints = 30000
-	base_buildtime = 730
-	cost = 0
-	combat_size_multiplier = 50
-	size_multiplier = 4
-	fleet_slot_size = 2
-	section_slots = { "core" = { locator = "root" } }
-	is_designable = no
-	num_target_locators = 0
-	is_space_station = no
-	can_have_federation_design = no
-	is_civilian = no
-	components_add_to_cost = no
-	is_listed = no
-	can_disable = no
-
-	enable_default_design = no	#if yes, countries will have an auto-generated design at start
-	class = shipclass_starbase
-
-	required_component_set = "sensor_components"
-
-	build_block_radius = @build_block_radius_starbase
-	formation_priority = @starbase_formation_priority
-	icon_frame = -1
-}
-
-starbase_ai = {
-	graphical_culture = { "ai_01" }
-	max_speed = 0.0
-	acceleration = 0.0
-	rotation_speed = 0.0
-	modifier = {
-		ship_evasion_mult = -1
-		ship_armor_add = 20000
-		ship_shield_add = 20000
-	}
-	ship_modifier = {
-		ship_weapon_range_mult = 0.20
-	}
-	max_hitpoints = 20000
-	base_buildtime = 730
-	cost = 0
-	combat_size_multiplier = 50
-	size_multiplier = 4
-	fleet_slot_size = 2
-	section_slots = { "core" = { locator = "root" } }
-	is_designable = no
-	num_target_locators = 0
-	is_space_station = no
-	can_have_federation_design = no
-	is_civilian = no
-	components_add_to_cost = no
-	is_listed = no
-	can_disable = no
-
-	enable_default_design = no	#if yes, countries will have an auto-generated design at start
-	class = shipclass_starbase
-
-	required_component_set = "sensor_components"
-	required_component_set = "combat_computers"
-
-	build_block_radius = @build_block_radius_starbase
-	formation_priority = @starbase_formation_priority
-	icon_frame = -1
-}
-
-starbase_exd = {
-	graphical_culture = { "extra_dimensional_01" "extra_dimensional_02" "extra_dimensional_03" }
-	max_speed = 0.0
-	acceleration = 0.0
-	rotation_speed = 0.0
-	modifier = {
-		ship_evasion_mult = -1
-		ship_shield_add = 40000
-	}
-	ship_modifier = {
-		ship_weapon_range_mult = 0.20
-	}
-	max_hitpoints = 20000
-	base_buildtime = 730
-	cost = 0
-	combat_size_multiplier = 50
-	size_multiplier = 4
-	fleet_slot_size = 2
-	section_slots = { "core" = { locator = "root" } }
-	is_designable = no
-	num_target_locators = 0
-	is_space_station = no
-	can_have_federation_design = no
-	is_civilian = no
-	components_add_to_cost = no
-	is_listed = no
-	can_disable = no
-
-	enable_default_design = no	#if yes, countries will have an auto-generated design at start
-	class = shipclass_starbase
-
-	required_component_set = "sensor_components"
-	required_component_set = "combat_computers"
-
-	build_block_radius = @build_block_radius_starbase
-	formation_priority = @starbase_formation_priority
-	icon_frame = -1
-}
-
-starbase_marauder = {
-	graphical_culture = { "pirate_01" }
-	max_speed = 0.0
-	acceleration = 0.0
-	rotation_speed = 0.0
-	modifier = {
-		ship_evasion_mult = -1
-		ship_shield_add = 10000
-		ship_armor_add = 10000
-	}
-	ship_modifier = {
-		ship_weapon_range_mult = 0.20
-	}
-	max_hitpoints = 20000
-	base_buildtime = 730
-	cost = 0
-	combat_size_multiplier = 50
-	size_multiplier = 4
-	fleet_slot_size = 2
-	section_slots = { "mid" = { locator = "part1" } }
-	is_designable = no
-	num_target_locators = 0
-	is_space_station = no
-	can_have_federation_design = no
-	is_civilian = no
-	components_add_to_cost = no
-	is_listed = no
-	can_disable = no
-
-	enable_default_design = no	#if yes, countries will have an auto-generated design at start
-	class = shipclass_starbase
-
-	required_component_set = "power_core"
-	required_component_set = "sensor_components"
-	required_component_set = "combat_computers"
-
-	build_block_radius = @build_block_radius_starbase
-	formation_priority = @starbase_formation_priority
-	icon_frame = -1
-}
-
 ##################
 # Defensive Platform
 ##################
@@ -494,7 +437,7 @@ ion_cannon = {
 	max_speed = 6
 	rotation_speed = 10
 	acceleration = 10
-	max_hitpoints = 18000
+	max_hitpoints = 10000
 	modifier = {
 		ship_evasion_mult = -1
 	}
@@ -512,6 +455,7 @@ ion_cannon = {
 	num_target_locators = 0
 	is_space_station = yes
 	base_buildtime = 1080
+	auto_upgrade = no
 	
 	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
 	prerequisites = { "tech_titans" }
@@ -525,45 +469,11 @@ ion_cannon = {
 	possible_starbase = {
 		has_starbase_size >= starbase_citadel
 	}
-	
-	cost = 2000
-}
 
-xl_cannon = {
-	max_speed = 6
-	rotation_speed = 10
-	acceleration = 10
-	max_hitpoints = 10000
-	modifier = {
-		ship_evasion_mult = -1
+	resources = {
+		category = starbase_stations
+		cost = {
+			alloys = 2000
+		}
 	}
-	ship_modifier = {
-		ship_weapon_range_mult = 0.50
-	}
-	size_multiplier = 4
-	fleet_slot_size = 4
-	combat_size_multiplier = 4
-	section_slots = { "ship" = { locator = "part1" } }
-	is_designable = yes
-	components_add_to_cost = no
-	uses_name_prefix = no
-	takes_name_from_ship_design = yes
-	num_target_locators = 0
-	is_space_station = yes
-	base_buildtime = 360
-	
-	enable_default_design = yes	#if yes, countries will have an auto-generated design at start
-	prerequisites = { "tech_energy_lance_1" }
-	class = shipclass_military_station
-	ship_class_icon_frame = 26
-	construction_type = starbase_defenses
-	required_component_set = "power_core"
-	required_component_set = "sensor_components"
-	required_component_set = "combat_computers"
-	
-	possible_starbase = {
-		has_starbase_size >= starbase_citadel
-	}
-	
-	cost = 2000
 }

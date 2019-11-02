@@ -4,11 +4,13 @@
 # SCIENCE_STARBASE_SECTION
 # HANGAR_STARBASE_SECTION
 # ASSEMBLYYARD_STARBASE_SECTION
+# ANCHORAGE_STARBASE_SECTION
+# ```
 
 ###modded
 solar_panel_network = {
-	icon = "GFX_solar_panel_network"
-	section = "REFINERY_STARBASE_SECTION"
+	icon = "GFX_starbase_solar_panel_network"
+	section = "ANCHORAGE_STARBASE_SECTION"
 	construction_days = 180
 	initial = yes
 	
@@ -22,36 +24,187 @@ solar_panel_network = {
 					has_megastructure = dyson_sphere_4
 					has_megastructure = dyson_sphere_5
 				}
-			}				
+			}			
 		}
 	}
 	
 	resources = {
 		category = starbase_modules
 		cost = {
-			alloys = 50
+			alloys = 200
 		}
 
 		produces = {
-			energy = 3
+			energy = 5
 		}
-		produced_resource_trigger = {
-			modifier = {
-				hidden_trigger = { exists = this }		
+
+		produces = {
+			trigger = {
 				has_starbase_building = large_solar_panel_network
-				resources = {
-					produces = {
-						energy = 5
-					}
-				}
 			}
+			energy = 2
 		}
 	}
 	
 	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
 	ai_weight = {
 		weight = 15
 	}
 }
 
+space_power_plant = {
+	icon = "GFX_starbase_space_power_plant"
+	section = "ANCHORAGE_STARBASE_SECTION"
+	construction_days = 80
+
+	resources = {
+		category = starbase_modules
+		cost = { 
+			alloys = 100
+		}
+
+		produces = { 
+			energy = 6
+		}
+
+		upkeep = {
+			food = 1
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 50
+		modifier = { add = 500 has_starbase_size < starbase_starport }
+		modifier = { add = 100 count_starbase_modules = { type = space_power_plant count > 1 } }
+		modifier = { add = 100 count_starbase_modules = { type = space_power_plant count > 2 } }
+		modifier = { add = 100 count_starbase_modules = { type = space_power_plant count > 3 } }
+		modifier = { add = 100 count_starbase_modules = { type = space_power_plant count > 4 } }
+		modifier = { add = 100 count_starbase_modules = { type = space_power_plant count > 5 } }
+		modifier = { 
+			factor = 0 
+			solar_system = {
+				OR = {
+					any_system_planet = { exists = owner owner = { is_country_type = default } }
+					AND = { has_star_flag = enclave any_ship_in_system = { exists = owner owner = { has_country_flag = trader_enclave_country } } }			
+				}
+			}
+		}
+	}
+}
+
+
+space_mining_network = {
+	icon = "GFX_starbase_asteroid_mining"
+	section = "ANCHORAGE_STARBASE_SECTION"
+	construction_days = 180
+	initial = yes
+	
+	possible = {
+		solar_system = {
+			has_planet_class = pc_asteroid
+		}
+	}
+
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 150
+		}
+
+		produces = {
+			minerals = 3.5
+		}
+
+		produces = {
+			trigger = {
+				has_starbase_building = large_reprocessing_network
+			}
+			minerals = 1.5
+		}
+	}
+	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 15
+	}
+}
+
+sb_shield_generators = {
+	icon = "GFX_starbase_shields"
+	section = "ANCHORAGE_STARBASE_SECTION"
+	construction_days = 200
+	
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 75
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	station_modifier = {
+		ship_shield_add = 5000
+		ship_shield_regen_add_static = 1.0
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 20
+		modifier = { factor = 0.5 count_starbase_modules = { type = sb_shield_generators count > 1 } }
+		modifier = { factor = 0.5 count_starbase_modules = { type = sb_shield_generators count > 2 } }
+		modifier = { factor = 0 count_starbase_modules = { type = sb_shield_generators count >= 6 } }
+	}
+}
+
+sb_shield_repair_generators = {
+	icon = "GFX_starbase_regen_shields"
+	section = "ANCHORAGE_STARBASE_SECTION"
+	construction_days = 160
+	
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 90
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	station_modifier = {
+		ship_shield_add = 1000
+		ship_shield_regen_add_static = 15.0
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 20
+		modifier = { factor = 0.5 count_starbase_modules = { type = sb_shield_repair_generators count > 1 } }
+		modifier = { factor = 0.25 count_starbase_modules = { type = sb_shield_repair_generators count > 2 } }
+		modifier = { factor = 0 count_starbase_modules = { type = sb_shield_repair_generators count >= 6 } }
+	}
+}
+
+sb_eng_support = {
+	icon = "GFX_starbase_eng_support"
+	section = "ANCORAGE_STRABASE_SECTION" 
+	construction_days = 120
+
+	resources = {
+		category = starbase_modules
+		cost = {
+			alloys = 120
+			
+		}
+		
+	}
+}
 ###end modded

@@ -5,5 +5,5 @@ tags={
 	"Military"
 }
 picture="mod_profile_1.png"
+supported_version="2.5.*"
 remote_file_id="1403430492"
-supported_version="2.2.*"

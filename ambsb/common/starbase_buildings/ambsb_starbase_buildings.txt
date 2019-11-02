@@ -1,38 +1,14 @@
 
 #modded content
 large_solar_panel_network = {
-	icon = "GFX_solar_panel_network"
+	icon = "GFX_starbase_solar_panel_network"
 	construction_days = 240
-
-	possible = {
-		custom_tooltip = {
-			fail_text = "requires_starport"
-			has_starbase_size >= starbase_starport
-		}
-	}
-
-	resources = {
-		category = starbase_buildings
-		cost = {
-			alloys = 150
-		}
-
-		produces = {
-			energy = 15
-		}
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_space_mining_1 }
 	}
 	
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
-	ai_weight = {
-		weight = 10
-	}
-}
-
-large_reprocessing_network = {
-	icon = "GFX_mining_terminal"
-	construction_days = 240
-
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_starport"
@@ -47,6 +23,42 @@ large_reprocessing_network = {
 		}
 
 		produces = {
+			energy = 15
+		}
+	}
+
+	show_in_tech = "tech_space_mining_1"
+	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 10
+	}
+}
+
+large_reprocessing_network = {
+	icon = "GFX_starbase_mining_terminal"
+	construction_days = 240
+	
+	potential = {
+		exists = owner
+		owner = { has_technology = tech_space_mining_1 }
+	}
+	
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 250
+		}
+
+		produces = {
 			minerals = 10
 		}
 		
@@ -54,10 +66,84 @@ large_reprocessing_network = {
 			energy = 20
 		}
 	}
+
+	show_in_tech = "tech_space_mining_1"
 	
 	ai_build_at_chokepoint = no
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
 		weight = 10
+	}
+}
+
+Space_Foundry = {
+	icon = "GFX_starbase_space_foundry"
+	construction_days = 180
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 250
+			energy = 500
+		}
+
+		produces = {
+			alloys = 12
+		}
+		
+		upkeep = {
+			energy = 16
+			minerals = 24
+		}
+	}
+
+	show_in_tech = "tech_space_mining_1"
+	
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 10
+	}
+}
+
+Space_Factory = {
+	icon = "GFX_starbase_space_factory"
+	construction_days = 180
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starport"
+			has_starbase_size >= starbase_starport
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 250
+			minerals = 150
+		}
+		
+		produces = {
+			consumer_goods = 20
+		}
+
+		upkeep = {
+			energy = 20
+			minerals = 20
+		}
+	}
+
+	ai_build_at_chokepoint = no
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 5		
 	}
 }
